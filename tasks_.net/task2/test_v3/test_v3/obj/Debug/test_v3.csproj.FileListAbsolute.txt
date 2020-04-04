@@ -1,0 +1,9 @@
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\bin\Debug\test_v3.exe.config
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\bin\Debug\test_v3.exe
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\bin\Debug\test_v3.pdb
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\obj\Debug\test_v3.csproj.CoreCompileInputs.cache
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\obj\Debug\test_v3.exe
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\obj\Debug\test_v3.pdb
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\bin\Debug\System.ValueTuple.dll
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\bin\Debug\System.ValueTuple.xml
+C:\Users\izabela.kuzma\source\repos\test_v3\test_v3\obj\Debug\test_v3.csproj.CopyComplete
