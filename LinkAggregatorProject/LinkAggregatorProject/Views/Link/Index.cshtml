@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Http
+@*@model IEnumerable<LinkAggregatorProject.Models.LinkRatingViewModel>*@
+@model cloudscribe.Pagination.Models.PagedResult<LinkRatingViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Controller"] = "Link";
+    ViewData["Action"] = "Index";  
+}
+
+<div class="jumbotron">
+    <h1>Agregator linków</h1> 
+</div>
+
+@foreach (var item in Model.Data)
+{
+<div class="row borders">
+    <div class="col-md-10">
+
+        <h3>
+            <strong>@Html.DisplayFor(modelItem => item.Title)</strong>
+        </h3>
+        <span class="lead"><a href="@Html.DisplayFor(modelItem => item.LinkAddress)">@Html.DisplayFor(modelItem => item.LinkAddress)</a></span>
+
+        <p style="text-align:left">Data dodania: @Html.DisplayFor(modelItem => item.AddingData)</p>
+
+    </div>
+    <div class="col-md-2">
+        @if (Context.Session.GetString("UserID") != null && Context.Session.GetString("UserID") != item.UserId.ToString() && item.IsRate == 0)
+        {
+            @using (Html.BeginForm("RatingAdd", "Link"))
+            {
+                @Html.Hidden("LinkId", item.LinkId)
+                <span style="font-size:large"> <strong>Liczba ocen: @Html.DisplayFor(modelItem => item.Sum) </strong></span>
+                <input class="btn btn-success" type="submit" value="+" />
+            }
+        }
+        else if (Context.Session.GetString("UserID") != null && Context.Session.GetString("UserID") != item.UserId.ToString() && item.IsRate == 1)
+        {
+            @using (Html.BeginForm("RatingRemove", "Link"))
+            {
+                @Html.Hidden("LinkId", item.LinkId)
+                <span style="font-size:large"> <strong>Liczba ocen: @Html.DisplayFor(modelItem => item.Sum) </strong></span>
+                <input class="btn btn-danger" type="submit" value="-" />
+
+                @*@Html.Hidden("RateId", item.RateId)
+                <span style="font-size:large"> <strong>Liczba ocen: @Html.DisplayFor(modelItem => item.Sum) </strong></span>
+                <input class="btn btn-danger" type="submit" value="-" />*@
+            }
+        }
+        else if (Context.Session.GetString("UserID") != null && Context.Session.GetString("UserID") == item.UserId.ToString())
+        {
+            <span style="font-size:large"> <strong>Liczba ocen: @Html.DisplayFor(modelItem => item.Sum) </strong></span>
+        }
+        else
+        {
+            <span style="font-size:large"> <strong>Liczba ocen: @Html.DisplayFor(modelItem => item.Sum) </strong></span>
+        }
+    </div>
+    </div>
+    }
+    <partial name="_PaginationPartial" view-data="ViewData" model="Model" />
