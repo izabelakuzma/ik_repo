@@ -1,7 +1,0 @@
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\bin\Debug\test_v2.exe.config
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\bin\Debug\test_v2.exe
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\bin\Debug\test_v2.pdb
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\obj\Debug\test_v2.csproj.CoreCompileInputs.cache
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\obj\Debug\test_v2.exe
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\obj\Debug\test_v2.pdb
-C:\Users\izabela.kuzma\source\repos\test_v2\test_v2\obj\Debug\test_v2.csprojAssemblyReference.cache
